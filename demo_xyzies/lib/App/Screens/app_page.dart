@@ -14,20 +14,20 @@ class MyAppPage extends StatefulWidget {
 class _MyAppPageState extends State<MyAppPage> {
   int selectedIndex = 0;
 
-  final screens = const [
+  final screens =  [
     HomePage(),
-    TodoPage(),
+    TodoList(),
     CarPage(),
     ProfilePage(),
   ];
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: screens[selectedIndex],
-        // body: IndexedStack(
-        //   index: selectedIndex,
-        //   children: screens,
-        // ),
+        // body: screens[selectedIndex],
+        body: IndexedStack(
+          index: selectedIndex,
+          children: screens,
+        ),
 
         bottomNavigationBar: BottomNavigationBar(
           // config to get default values

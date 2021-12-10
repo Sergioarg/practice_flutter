@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Todo {
   Todo({required this.name, required this.checked});
   final String name;
@@ -38,24 +39,22 @@ class TodoItem extends StatelessWidget {
   }
 }
 
+
 class TodoList extends StatefulWidget {
   @override
   _TodoListState createState() => _TodoListState();
 }
 
+
 class _TodoListState extends State<TodoList> {
   final TextEditingController _textFieldController = TextEditingController();
   final List<Todo> _todos = <Todo>[];
 
-  final String _title = 'Todo Page - Demo XYZies';
-
   @override
   Widget build(BuildContext context) {
-    // Widget template comes here
-
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Todo List'),
+        title: new Text('Todo list'),
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(vertical: 8.0),
@@ -68,7 +67,7 @@ class _TodoListState extends State<TodoList> {
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: () => _displayDialog(),
-          tooltip: 'Add item',
+          tooltip: 'Add Item',
           child: Icon(Icons.add)),
     );
   }
@@ -86,7 +85,6 @@ class _TodoListState extends State<TodoList> {
     _textFieldController.clear();
   }
 
-  // Other functions
   Future<void> _displayDialog() async {
     return showDialog<void>(
       context: context,
@@ -112,3 +110,4 @@ class _TodoListState extends State<TodoList> {
     );
   }
 }
+
