@@ -17,11 +17,20 @@ class _HomePageState extends State<HomePage> {
       color: Colors.blue, // This is required
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Home'),
+          title: const Text('Welcome to the demo for XYZies'),
           centerTitle: true,
         ),
-        body: const Center(
-            child: Text('Home :)', style: TextStyle(fontSize: 60))),
+        body: Stack(
+          fit: StackFit.expand,
+          children: [
+            Column(
+              children: const [
+                Text("Here you will find a small project on cars in flutter",
+                    style: TextStyle(fontSize: 15))
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

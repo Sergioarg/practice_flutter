@@ -1,4 +1,4 @@
-import 'package:demo_xyzies/App/Screens/bussines_page.dart';
+import 'package:demo_xyzies/App/Screens/todo_page.dart';
 import 'package:demo_xyzies/App/Screens/car_page.dart';
 import 'package:demo_xyzies/App/Screens/home_page.dart';
 import 'package:demo_xyzies/App/Screens/profile_page.dart';
@@ -14,9 +14,9 @@ class MyAppPage extends StatefulWidget {
 class _MyAppPageState extends State<MyAppPage> {
   int selectedIndex = 0;
 
-  final screens = [
+  final screens = const [
     HomePage(),
-    BussinesPage(),
+    TodoPage(),
     CarPage(),
     ProfilePage(),
   ];
@@ -32,12 +32,12 @@ class _MyAppPageState extends State<MyAppPage> {
         bottomNavigationBar: BottomNavigationBar(
           // config to get default values
           type: BottomNavigationBarType.fixed, // remove the animations
-          backgroundColor: Colors.black,
-          selectedItemColor: Colors.orangeAccent,
+          backgroundColor: Colors.blue,
+          selectedItemColor: Colors.black,
           unselectedItemColor: Colors.white70,
-          // selectedFontSize: 30,
+          selectedFontSize: 20,
           // unselectedFontSize: 20,
-          // iconSize: 30,
+          iconSize: 30,
           // showUnselectedLabels: false,
 
           currentIndex: selectedIndex,
