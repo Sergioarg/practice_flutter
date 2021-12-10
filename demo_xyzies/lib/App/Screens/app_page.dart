@@ -16,9 +16,9 @@ class _MyAppPageState extends State<MyAppPage> {
 
   final screens = [
     HomePage(),
+    BussinesPage(),
     CarPage(),
     ProfilePage(),
-    BussinesPage(),
   ];
 
   @override
@@ -31,13 +31,14 @@ class _MyAppPageState extends State<MyAppPage> {
 
         bottomNavigationBar: BottomNavigationBar(
           // config to get default values
-          type:
-              BottomNavigationBarType.fixed, // this line remove the animations
+          type: BottomNavigationBarType.fixed, // remove the animations
           backgroundColor: Colors.black,
           selectedItemColor: Colors.orangeAccent,
           unselectedItemColor: Colors.white70,
-          selectedFontSize: 20,
-          iconSize: 20,
+          // selectedFontSize: 30,
+          // unselectedFontSize: 20,
+          // iconSize: 30,
+          // showUnselectedLabels: false,
 
           currentIndex: selectedIndex,
           onTap: (index) => setState(() => selectedIndex = index),
