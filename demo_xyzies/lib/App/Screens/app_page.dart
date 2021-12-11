@@ -31,7 +31,7 @@ class _MyAppPageState extends State<MyAppPage> {
 
         bottomNavigationBar: BottomNavigationBar(
           // config to get default values
-          type: BottomNavigationBarType.fixed, // remove the animations
+          // type: BottomNavigationBarType.fixed, // remove the animations
           backgroundColor: Colors.blue,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.white70,
