@@ -54,7 +54,7 @@ class _TodoListState extends State<TodoList> {
 
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Todo List'),
+        title: Text(_title),
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(vertical: 8.0),
@@ -68,7 +68,11 @@ class _TodoListState extends State<TodoList> {
       floatingActionButton: FloatingActionButton(
           onPressed: () => _displayDialog(),
           tooltip: 'Add item',
-          child: Icon(Icons.add)),
+          child: Icon(Icons.add),
+
+          ),
+          floatingActionButtonLocation:
+          FloatingActionButtonLocation.endTop,
     );
   }
 

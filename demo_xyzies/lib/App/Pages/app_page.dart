@@ -22,7 +22,7 @@ class _MyAppPageState extends State<MyAppPage> {
     ProfilePage(),
   ];
 
-  final items = <Widget>[
+  final items = const <Widget>[
     Icon(Icons.home, size: 30),
     Icon(Icons.search, size: 30),
     Icon(Icons.favorite, size: 30),
@@ -31,22 +31,26 @@ class _MyAppPageState extends State<MyAppPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: selectedIndex,
-        children: pages,
-      ),
-      backgroundColor: Colors.blue,
-      appBar: AppBar(
-        title: Text("Home page"),
-        elevation: 0,
-        centerTitle: true,
-      ),
+    return SafeArea(
+      top: false,
+      child: Scaffold(
+        extendBody: true,
+        backgroundColor: Colors.redAccent,
 
-      bottomNavigationBar: CurvedNavigationBar(
-        // items = items,
-        items: items,
+        body: pages[selectedIndex],
 
+        bottomNavigationBar: CurvedNavigationBar(
+          // Color of the navbar
+          color: Colors.blue,
+          // animationDuration: Duration(microseconds: 300),
+          buttonBackgroundColor: Colors.white,
+          backgroundColor: Colors.transparent,
+          height: 60,
+          items: items,
+          onTap: (index) => setState(
+            () => selectedIndex = index,
+          ),
+        ),
       ),
     );
   }
