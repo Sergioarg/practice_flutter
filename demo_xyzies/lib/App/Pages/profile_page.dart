@@ -10,15 +10,17 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   final String _title = 'Profile';
-  // final double coverHeight = 280;
-  // final double profileHeight = 144;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[buildTop(), buildContent()]),
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          buildTop(),
+          buildContent(),
+        ],
+      ),
     );
   }
 }

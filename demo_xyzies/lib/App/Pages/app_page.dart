@@ -31,28 +31,24 @@ class _MyAppPageState extends State<MyAppPage> {
   ];
 
   @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      // top: false,
-      child: Scaffold(
-        extendBody: true,
-        backgroundColor: Colors.redAccent,
+  Widget build(BuildContext context) => Scaffold(
+      extendBody: true,
+      backgroundColor: Colors.redAccent,
 
-        body: pages[selectedIndex],
-
-        bottomNavigationBar: CurvedNavigationBar(
-          // Color of the navbar
-          color: Colors.blue,
-          // animationDuration: Duration(microseconds: 300),
-          buttonBackgroundColor: Colors.white,
-          backgroundColor: Colors.transparent,
-          height: 60,
-          items: items,
-          onTap: (index) => setState(
-            () => selectedIndex = index,
-          ),
+      body: IndexedStack(
+          index: selectedIndex,
+          children: pages,
+        ),
+      bottomNavigationBar: CurvedNavigationBar(
+        color: Colors.blue,
+        buttonBackgroundColor: Colors.white,
+        // backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
+        height: 60,
+        items: items,
+        onTap: (index) => setState(
+          () => selectedIndex = index,
         ),
       ),
     );
-  }
 }
