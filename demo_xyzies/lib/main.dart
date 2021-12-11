@@ -1,4 +1,4 @@
-import 'package:demo_xyzies/App/Screens/app_page.dart';
+import 'package:demo_xyzies/App/Pages/app_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
