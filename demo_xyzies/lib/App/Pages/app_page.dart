@@ -13,7 +13,8 @@ class MyAppPage extends StatefulWidget {
 }
 
 class _MyAppPageState extends State<MyAppPage> {
-  int selectedIndex = 0;
+  // TODO: change to 0
+  int selectedIndex = 3;
 
   final pages = [
     HomePage(),
@@ -32,7 +33,7 @@ class _MyAppPageState extends State<MyAppPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      top: false,
+      // top: false,
       child: Scaffold(
         extendBody: true,
         backgroundColor: Colors.redAccent,
