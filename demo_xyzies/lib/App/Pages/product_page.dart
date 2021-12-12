@@ -1,4 +1,4 @@
-import 'package:demo_xyzies/App/Widgets/widgets_product.dart';
+import 'package:demo_xyzies/Shared/content_product.dart';
 import 'package:flutter/material.dart';
 
 class ProductPage extends StatefulWidget {
@@ -22,7 +22,7 @@ class _ProductPageState extends State<ProductPage> {
       body: const SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: AllCarousel(),
+        child: BuildCarousel(),
       ),
     );
   }
