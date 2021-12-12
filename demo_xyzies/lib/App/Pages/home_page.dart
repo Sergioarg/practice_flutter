@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final String _title = 'Home - Demo XYZies';
+  final String _title = 'Demo XYZies';
 
   @override
   Widget build(BuildContext context) {

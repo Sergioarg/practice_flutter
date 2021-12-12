@@ -1,7 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:demo_xyzies/App/Pages/product_page.dart';
 import 'package:demo_xyzies/App/Pages/todo_page.dart';
-import 'package:demo_xyzies/App/Pages/car_page.dart';
 import 'package:demo_xyzies/App/Pages/home_page.dart';
 import 'package:demo_xyzies/App/Pages/profile_page.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +17,6 @@ class _MyAppPageState extends State<MyAppPage> {
   int selectedIndex = 2;
 
   final pages = [
-    // LoginPage(),
     HomePage(),
     TodoList(),
     ProductPage(),

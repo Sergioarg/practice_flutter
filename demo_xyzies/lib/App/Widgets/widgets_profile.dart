@@ -1,4 +1,4 @@
-import 'package:demo_xyzies/Shared/const_images.dart';
+import 'package:demo_xyzies/Shared/consts_images.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -42,6 +42,7 @@ Widget buildProfileImage() => CircleAvatar(
 
 // buildSocialIcon - build the incons of the user
 Widget buildSocialIcon(IconData icon) => CircleAvatar(
+      // TODO: add hreft to icons
       radius: 25,
       child: Material(
           shape: const CircleBorder(),
@@ -74,7 +75,8 @@ Widget buildContent() => Container(
             ],
           ),
           Container(
-            margin: const EdgeInsets.all(40.0),
+            margin: const EdgeInsets.only(
+                left: 50.0, right: 50.0, bottom: 40.0, top: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
@@ -86,7 +88,7 @@ Widget buildContent() => Container(
                     )),
                 SizedBox(height: 20),
                 Text(
-                    'Hello my name is sergio ramos and this is a demo project to present as a technical proof for XYZies..',
+                    'Hello my name is sergio ramos and this is a demo project to present as a technical proof for XYZies.',
                     style:
                         TextStyle(fontSize: 15, fontWeight: FontWeight.normal)),
               ],

@@ -46,7 +46,7 @@ class TodoList extends StatefulWidget {
 class _TodoListState extends State<TodoList> {
   final TextEditingController _textFieldController = TextEditingController();
   final List<Todo> _todos = <Todo>[];
-  final String _title = 'Todo Page - Demo XYZies';
+  final String _title = 'Todo Page';
 
   @override
   Widget build(BuildContext context) {
