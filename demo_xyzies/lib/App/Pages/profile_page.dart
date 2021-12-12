@@ -9,7 +9,6 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  final String _title = 'Profile';
 
   @override
   Widget build(BuildContext context) {
