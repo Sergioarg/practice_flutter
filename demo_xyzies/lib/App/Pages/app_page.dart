@@ -15,7 +15,7 @@ class MyAppPage extends StatefulWidget {
 
 class _MyAppPageState extends State<MyAppPage> {
   // TODO: change to 0
-  int selectedIndex = 2;
+  int selectedIndex = 3;
 
   final pages = [
     // LoginPage(),
