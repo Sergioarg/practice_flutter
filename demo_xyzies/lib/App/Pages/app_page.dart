@@ -1,4 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:demo_xyzies/App/Pages/product.dart';
 import 'package:demo_xyzies/App/Pages/todo_page.dart';
 import 'package:demo_xyzies/App/Pages/car_page.dart';
 import 'package:demo_xyzies/App/Pages/home_page.dart';
@@ -14,19 +15,21 @@ class MyAppPage extends StatefulWidget {
 
 class _MyAppPageState extends State<MyAppPage> {
   // TODO: change to 0
-  int selectedIndex = 3;
+  int selectedIndex = 2;
 
   final pages = [
+    // LoginPage(),
     HomePage(),
+    // ProductCard(),
     TodoList(),
-    CarPage(),
+    ProductPage(),
     ProfilePage(),
   ];
 
   final items = const <Widget>[
     Icon(Icons.home, size: 30),
     Icon(Icons.search, size: 30),
-    Icon(Icons.favorite, size: 30),
+    Icon(Icons.directions_car_filled, size: 30),
     Icon(Icons.person, size: 30),
   ];
 
