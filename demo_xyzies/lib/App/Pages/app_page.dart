@@ -18,7 +18,7 @@ class _MyAppPageState extends State<MyAppPage> {
 
   final pages = [
     HomePage(),
-    TodoList(),
+    TodoApp(),
     ProductPage(),
     ProfilePage(),
   ];

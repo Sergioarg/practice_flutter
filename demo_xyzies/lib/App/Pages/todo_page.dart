@@ -1,23 +1,57 @@
-import 'package:demo_xyzies/App/Widgets/widgets_todo_page.dart';
-import 'package:demo_xyzies/main.dart';
+import 'package:demo_xyzies/App/Widgets/widgets_todo/add_todo_dialog.dart';
+// import 'package:demo_xyzies/main.dart';
 import 'package:flutter/material.dart';
 
-class TodoList extends StatefulWidget {
+class TodoApp extends StatefulWidget {
+  const TodoApp({Key? key}) : super(key: key);
+
   @override
-  _TodoListState createState() => _TodoListState();
+  _TodoAppState createState() => _TodoAppState();
 }
 
-class _TodoListState extends State<TodoList> {
+class _TodoAppState extends State<TodoApp> {
   @override
   Widget build(BuildContext context) {
-    final tabs = [Container(), Container()];
+    final tabs = [
+      Container(child: Text("todos")),
+      Container(child: Text("completed")),
+    ];
+
+    int selectedIndex = 0;
+
     return Scaffold(
-      appBar: AppBar(title: Text('Todo App'),),
+      appBar: AppBar(
+        title: Text('Todo App'),
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Colors.white.withOpacity(0.7),
-        selectedItemColor: ,
-        items: [],),
+        backgroundColor: Colors.white,
+        unselectedItemColor: Colors.red.withOpacity(0.7),
+        selectedItemColor: Colors.black,
+        currentIndex: selectedIndex,
+        onTap: (index) => setState(() {
+          selectedIndex = index;
+        }),
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: 'Todos'),
+          BottomNavigationBarItem(icon: Icon(Icons.done), label: 'Completed'),
+
+        ],
+      ),
+      body: tabs[selectedIndex],
+      floatingActionButton:
+          FloatingActionButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            backgroundColor: Colors.black,
+            onPressed: () => showDialog(
+              context: context,
+              builder: (context) => AddTodoDialogWidget(),
+              barrierDismissible: true,
+            ),
+            child: Icon(Icons.add),
+          ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
     );
   }
 }
