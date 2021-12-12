@@ -3,7 +3,6 @@ import 'package:demo_xyzies/App/Widgets/widgets_product.dart';
 import 'package:demo_xyzies/Shared/consts_product.dart';
 import 'package:flutter/material.dart';
 
-
 class BuildCarousel extends StatefulWidget {
   const BuildCarousel({Key? key}) : super(key: key);
 
@@ -22,9 +21,10 @@ class BuildCarouselState extends State<BuildCarousel> {
     return CarouselSlider(
         carouselController: _carouselController,
         options: CarouselOptions(
-            // TODO: add validatio to change false if i choose some item
+            // TODO: add validation to change false if i choose some item
+            // autoPlay: _selectedIndex != null ? true : false,
             autoPlay: true,
-            autoPlayAnimationDuration: const Duration(seconds: 1),
+            autoPlayAnimationDuration: const Duration(milliseconds: 600),
             height: 450.0,
             aspectRatio: 16 / 9,
             viewportFraction: 0.70,
