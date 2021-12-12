@@ -24,7 +24,7 @@ class _AddTodoDialogWidgetState extends State<AddTodoDialogWidget> {
               onChangedTitle: (title) => setState(() => this.title = title),
               onChangedDescription: (description) =>
                   setState(() => this.description = description),
-              onSavedTodo: () {},
+              onSavedTodo: () {}, // call the fincionality
             ),
           ],
         ),

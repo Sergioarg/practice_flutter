@@ -64,7 +64,7 @@ class TodoFormWidget extends StatelessWidget {
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.black),
           ),
-          onPressed: onSavedTodo,
+          onPressed: onSavedTodo, // call the function
           child: Text('Save'),
         ),
       );
