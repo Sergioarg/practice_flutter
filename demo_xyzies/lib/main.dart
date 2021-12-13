@@ -8,14 +8,14 @@ void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-  final _title = 'Todo App';
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
       create: (context) => TodosProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: _title,
+        title: 'Demo XYZies',
         theme: ThemeData(
           primaryColor: Colors.blue,
           scaffoldBackgroundColor: Colors.white,
