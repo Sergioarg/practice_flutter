@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:demo_xyzies/App/model/todo.dart';
 
+// Controler of the functions
 class TodosProvider extends ChangeNotifier {
   // _todo <- privated
 
@@ -30,6 +31,8 @@ class TodosProvider extends ChangeNotifier {
   // make todo pubic
   List<Todo> get todos => _todos.where((todo) => todo.isDone == false).toList();
 
+  List<Todo> get todosCompleted => _todos.where((todo) => todo.isDone).toList();
+
   // metodos para el crud de los todos
 
   void addTodo(Todo todo) {
@@ -40,5 +43,12 @@ class TodosProvider extends ChangeNotifier {
   void removeTodo(Todo todo) {
     _todos.remove(todo);
     notifyListeners();
+  }
+
+  // method to move completed todos
+  bool toggleTodoStatus(Todo todo) {
+    todo.isDone = !todo.isDone;
+    notifyListeners();
+    return todo.isDone;
   }
 }

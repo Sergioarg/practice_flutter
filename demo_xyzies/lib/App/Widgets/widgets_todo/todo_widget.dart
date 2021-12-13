@@ -28,7 +28,8 @@ class TodoWidget extends StatelessWidget {
               label: 'Edit',
             ),
             SlidableAction(
-              onPressed: (context) =>  deleteTodo(context, todo), // add funcition
+              onPressed: (context) =>
+                  deleteTodo(context, todo), // add funcition
               backgroundColor: Colors.red,
               foregroundColor: Colors.white,
               icon: Icons.delete,
@@ -49,7 +50,15 @@ class TodoWidget extends StatelessWidget {
                 activeColor: Theme.of(context).primaryColor,
                 checkColor: Colors.white,
                 value: todo.isDone,
-                onChanged: (_) {},
+                onChanged: (_) {
+                  // function to  move todos to new page
+                  final provider =
+                      Provider.of<TodosProvider>(context, listen: false);
+                  final isDone = provider.toggleTodoStatus(todo);
+
+                  Utils.showSnackBar(context,
+                      isDone ? 'Task Completed' : 'Task marked incomplete');
+                },
               ),
               const SizedBox(width: 20),
               Expanded(
