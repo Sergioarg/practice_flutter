@@ -1,4 +1,4 @@
-# demo_xyzies
+# Demo XYZies
 
 A new Flutter project.
 
