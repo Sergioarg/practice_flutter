@@ -36,7 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.3
   font_awesome_flutter: ^9.1.0
   carousel_slider: ^4.0.0
+  # package for todo page
   provider: ^6.0.1
+  flutter_slidable: ^0.5.7
 
 dev_dependencies:
   flutter_test:

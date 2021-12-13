@@ -1,4 +1,5 @@
 import 'package:demo_xyzies/App/Widgets/widgets_todo/add_todo_dialog.dart';
+import 'package:demo_xyzies/App/Widgets/widgets_todo/todo_list_widget.dart';
 // import 'package:demo_xyzies/main.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +14,8 @@ class _TodoAppState extends State<TodoApp> {
   @override
   Widget build(BuildContext context) {
     final tabs = [
-      Container(child: Text("todos")),
-      Container(child: Text("completed")),
+      TodoListWidget(),
+      Container(),
     ];
 
     int selectedIndex = 0;
