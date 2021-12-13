@@ -15,33 +15,37 @@ class TodoWidget extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Slidable(
-        key: Key(todo.id),
-        startActionPane: ActionPane(
-          motion: const ScrollMotion(),
-          children: [
-            SlidableAction(
-              onPressed: (context) => editTodo(context, todo), // add funcition
-              backgroundColor: Colors.green,
-              foregroundColor: Colors.white,
-              icon: Icons.edit,
-              label: 'Edit',
-            ),
-            SlidableAction(
-              onPressed: (context) =>
-                  deleteTodo(context, todo), // add funcition
-              backgroundColor: Colors.red,
-              foregroundColor: Colors.white,
-              icon: Icons.delete,
-              label: 'Delete',
-            ),
-          ],
+  Widget build(BuildContext context) => ClipRRect(
+        borderRadius: BorderRadius.circular(18),
+        child: Slidable(
+          key: Key(todo.id),
+          startActionPane: ActionPane(
+            motion: const ScrollMotion(),
+            children: [
+              SlidableAction(
+                onPressed: (context) =>
+                    editTodo(context, todo), // add funcition
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,
+                icon: Icons.edit,
+                label: 'Edit',
+              ),
+              SlidableAction(
+                onPressed: (context) =>
+                    deleteTodo(context, todo), // add funcition
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.white,
+                icon: Icons.delete,
+                label: 'Delete',
+              ),
+            ],
+          ),
+          child: buildTodo(context),
         ),
-        child: buildTodo(context),
       );
 
-  Widget buildTodo(BuildContext context) => ClipRRect(
-        borderRadius: BorderRadius.circular(50),
+  Widget buildTodo(BuildContext context) => GestureDetector(
+        onTap: () => editTodo(context, todo), // this is to make click directly
         child: Container(
           padding: EdgeInsets.all(20),
           child: Row(
@@ -55,7 +59,6 @@ class TodoWidget extends StatelessWidget {
                   final provider =
                       Provider.of<TodosProvider>(context, listen: false);
                   final isDone = provider.toggleTodoStatus(todo);
-
                   Utils.showSnackBar(context,
                       isDone ? 'Task Completed' : 'Task marked incomplete');
                 },
@@ -97,8 +100,8 @@ class TodoWidget extends StatelessWidget {
     Utils.showSnackBar(context, 'Deleted the task');
   }
 
-  void editTodo(BuildContext context, Todo tod) => Navigator.of(context).push(
-    MaterialPageRoute(
+  void editTodo(BuildContext context, Todo todo) => Navigator.of(context).push(
+        MaterialPageRoute(
           builder: (context) => EditTodoPage(todo: todo),
         ),
       );

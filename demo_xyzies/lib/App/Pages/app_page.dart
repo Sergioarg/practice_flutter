@@ -13,18 +13,18 @@ class MyAppPage extends StatefulWidget {
 }
 
 class _MyAppPageState extends State<MyAppPage> {
-  // TODO: change to 0
-  int selectedIndex = 1;
+
+  int selectedIndex = 0;
 
   final pages = [
-    HomePage(),
+    // HomePage(),
     TodoApp(),
     ProductPage(),
     ProfilePage(),
   ];
 
   final items = const <Widget>[
-    Icon(Icons.home, size: 30),
+    // Icon(Icons.home, size: 30),
     Icon(Icons.checklist_rtl_outlined, size: 30),
     Icon(Icons.directions_car_filled, size: 30),
     Icon(Icons.person, size: 30),
