@@ -1,3 +1,4 @@
+import 'package:demo_xyzies/App/Pages/edit_todo_page.dart';
 import 'package:demo_xyzies/App/provider/todos.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_xyzies/App/model/todo.dart';
@@ -20,8 +21,7 @@ class TodoWidget extends StatelessWidget {
           motion: const ScrollMotion(),
           children: [
             SlidableAction(
-              // onPressed: editTodo(context, todo), // add funcition
-              onPressed: null, // add funcition
+              onPressed: (context) => editTodo(context, todo), // add funcition
               backgroundColor: Colors.green,
               foregroundColor: Colors.white,
               icon: Icons.edit,
@@ -96,4 +96,17 @@ class TodoWidget extends StatelessWidget {
 
     Utils.showSnackBar(context, 'Deleted the task');
   }
+
+  void editTodo(BuildContext context, Todo tod) => Navigator.of(context).push(
+    MaterialPageRoute(
+          builder: (context) => EditTodoPage(todo: todo),
+        ),
+      );
+
+  // TODO: AGREGAR NUEVA PAGINA
+  // void completeTodo(BuildContext context, Todo tod) => Navigator.of(context).push(
+  //   MaterialPageRoute(
+  //         builder: (context) => CompleteTodoPage(todo: todo),
+  //       ),
+  //     );
 }
