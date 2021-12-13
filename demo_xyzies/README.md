@@ -1,16 +1,14 @@
 # Demo XYZies
 
-A new Flutter project.
+Flutter Demo made for the Xyzies company.
 
-## Getting Started
+# Description
 
-This project is a starting point for a Flutter application.
+This project is a simple demo with the handling of NABVAR lower, carousel of carts, User profile and all List where you can add, edit or delete tasks for doing.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Directories
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+|Directory|Description
+:---:|---
+|[lib](./lib)| All the information in the lib folder.
