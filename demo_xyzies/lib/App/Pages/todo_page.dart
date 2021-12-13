@@ -24,7 +24,7 @@ class _TodoAppState extends State<TodoApp> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Todo App'),
+        title: const Text('Todo App', style: TextStyle(fontSize: 20)),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,

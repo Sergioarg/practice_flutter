@@ -15,8 +15,7 @@ class _ProductPageState extends State<ProductPage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.blue,
-        title: const Text('Carousel Cars',
-            style: TextStyle(fontSize: 30)),
+        title: const Text('Carousel Cars', style: TextStyle(fontSize: 20)),
         centerTitle: false,
       ),
       body: const SizedBox(
