@@ -105,11 +105,4 @@ class TodoWidget extends StatelessWidget {
           builder: (context) => EditTodoPage(todo: todo),
         ),
       );
-
-  // TODO: Add new page
-  // void completeTodo(BuildContext context, Todo tod) => Navigator.of(context).push(
-  //   MaterialPageRoute(
-  //         builder: (context) => CompleteTodoPage(todo: todo),
-  //       ),
-  //     );
 }
