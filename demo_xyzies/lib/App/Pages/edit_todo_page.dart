@@ -28,7 +28,20 @@ class _EditTodoPageState extends State<EditTodoPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: Text('Edit Todo')),
+        appBar: AppBar(
+          title: Text('Edit Todo'),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.delete),
+              onPressed: () {
+                final provider =
+                    Provider.of<TodosProvider>(context, listen: false);
+                provider.removeTodo(widget.todo);
+                Navigator.of(context).pop(); // back to the last page
+              },
+            ),
+          ],
+        ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Form(
