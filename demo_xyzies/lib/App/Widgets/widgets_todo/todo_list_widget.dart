@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 // import 'package:demo_xyzies/App/Widgets/widgets_todo/todo_widget.dart';
 
 class TodoListWidget extends StatelessWidget {
+  const TodoListWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TodosProvider>(context);
@@ -14,7 +16,7 @@ class TodoListWidget extends StatelessWidget {
     final todos = provider.todos;
 
     return todos.isEmpty
-        ? Center(
+        ? const Center(
             child: Text(
             'No todos',
             style: TextStyle(fontSize: 20),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo_xyzies/App/model/todo.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:provider/provider.dart';
 
 class TodoWidget extends StatelessWidget {
   final Todo todo;
@@ -16,7 +15,6 @@ class TodoWidget extends StatelessWidget {
         key: Key(todo.id),
         startActionPane: ActionPane(
           motion: const ScrollMotion(),
-          // dismissible: DismissiblePane(onDismissed: () {}), //con esto se va
           children: [
             SlidableAction(
               onPressed: null, // add funcition
@@ -68,7 +66,7 @@ class TodoWidget extends StatelessWidget {
                         child: Text(
                           todo.description,
                           style: TextStyle(
-                              fontSize: 20, height: 1.5, color: Colors.red),
+                              fontSize: 20, height: 1.5),
                         ),
                       ),
                   ],
