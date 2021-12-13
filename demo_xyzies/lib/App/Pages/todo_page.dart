@@ -11,16 +11,16 @@ class TodoApp extends StatefulWidget {
 }
 
 class _TodoAppState extends State<TodoApp> {
+
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
 
-    // TODO: FIX CHANGE TO PAGE COMPLETED
     final tabs = [
       const TodoListWidget(),
       const CompletedListWidget(),
     ];
-
-    int selectIndex = 0;
 
     return Scaffold(
       appBar: AppBar(
@@ -30,16 +30,16 @@ class _TodoAppState extends State<TodoApp> {
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.black.withOpacity(0.7),
         selectedItemColor: Colors.black,
-        currentIndex: selectIndex,
+        currentIndex: selectedIndex,
         onTap: (index) => setState(() {
-          selectIndex = index;
+          selectedIndex = index;
         }),
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: 'Todos'),
           BottomNavigationBarItem(icon: Icon(Icons.done), label: 'Completed'),
         ],
       ),
-      body: tabs[selectIndex],
+      body: tabs[selectedIndex],
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
