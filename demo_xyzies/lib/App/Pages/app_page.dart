@@ -1,7 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:demo_xyzies/App/Pages/product_page.dart';
 import 'package:demo_xyzies/App/Pages/todo_page.dart';
-import 'package:demo_xyzies/App/Pages/home_page.dart';
 import 'package:demo_xyzies/App/Pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,15 +15,13 @@ class _MyAppPageState extends State<MyAppPage> {
 
   int selectedIndex = 0;
 
-  final pages = [
-    // HomePage(),
+  final pages = const [
     TodoApp(),
     ProductPage(),
     ProfilePage(),
   ];
 
   final items = const <Widget>[
-    // Icon(Icons.home, size: 30),
     Icon(Icons.checklist_rtl_outlined, size: 30),
     Icon(Icons.directions_car_filled, size: 30),
     Icon(Icons.person, size: 30),
@@ -34,16 +31,11 @@ class _MyAppPageState extends State<MyAppPage> {
   Widget build(BuildContext context) => Scaffold(
       extendBody: true,
       backgroundColor: Colors.redAccent,
-
-      body: IndexedStack(
-          index: selectedIndex,
-          children: pages,
-        ),
+      body: pages[selectedIndex],
       bottomNavigationBar: CurvedNavigationBar(
         color: Colors.blue,
         buttonBackgroundColor: Colors.white,
-        // backgroundColor: Colors.transparent,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         height: 60,
         items: items,
         onTap: (index) => setState(

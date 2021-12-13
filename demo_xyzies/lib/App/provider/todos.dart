@@ -5,36 +5,34 @@ import 'package:demo_xyzies/App/model/todo.dart';
 class TodosProvider extends ChangeNotifier {
   // _todo <- privated
 
-  List<Todo> _todos = [
+  final List<Todo> _todos = [
+      Todo(
+      createdTime: DateTime.now(),
+      title: 'Make Demo',
+      description: '- Todo and docs',
+    ),
     Todo(
       createdTime: DateTime.now(),
       title: 'Buy Food',
-      description: '''- Eggs
-- Water''',
+      description: '- Eggs Water',),
+    Todo(
+      createdTime: DateTime.now(),
+      title: 'Walk the Dog',
     ),
     Todo(
       createdTime: DateTime.now(),
-      title: 'Plan family trip to Norway',
-      description: '''- Rent some hotels
-- Rent a car
-- Pack suitcase''',
-    ),
-    Todo(
-      createdTime: DateTime.now(),
-      title: 'Walk the Dog 🐕',
-    ),
-    Todo(
-      createdTime: DateTime.now(),
-      title: 'Make Demo',
+      title: 'Plan family trip to Medellin',
+      description: '- Buy tickets',
     ),
   ];
-  // make todo pubic
-  List<Todo> get todos => _todos.where((todo) => todo.isDone == false).toList();
 
+
+  // Todos incompleted
+  List<Todo> get todos => _todos.where((todo) => todo.isDone == false).toList();
+  // Todos completed
   List<Todo> get todosCompleted => _todos.where((todo) => todo.isDone).toList();
 
-  // metodos para el crud de los todos
-
+  // Methods for the crude of the todos
   void addTodo(Todo todo) {
     _todos.add(todo);
     notifyListeners();
@@ -58,4 +56,3 @@ class TodosProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-

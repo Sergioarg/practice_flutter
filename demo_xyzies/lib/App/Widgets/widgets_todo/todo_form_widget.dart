@@ -22,9 +22,9 @@ class TodoFormWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             buildTitle(),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             buildDescription(),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             buildButton(),
           ],
         ),
@@ -40,7 +40,7 @@ class TodoFormWidget extends StatelessWidget {
           }
           return null;
         },
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           border: UnderlineInputBorder(),
           labelText: 'Title',
         ),
@@ -48,10 +48,10 @@ class TodoFormWidget extends StatelessWidget {
 
 
   Widget buildDescription() => TextFormField(
-    maxLines: 3,
+    maxLines: 1, // change for more space if you want
     initialValue: description,
     onChanged: onChangedDescription,
-    decoration: InputDecoration(
+    decoration: const InputDecoration(
       border: UnderlineInputBorder(),
       labelText: 'Description',
     ),
@@ -64,7 +64,7 @@ class TodoFormWidget extends StatelessWidget {
             backgroundColor: MaterialStateProperty.all(Colors.black),
           ),
           onPressed: onSavedTodo, // call the function
-          child: Text('Save'),
+          child: const Text('Save'),
         ),
       );
 }

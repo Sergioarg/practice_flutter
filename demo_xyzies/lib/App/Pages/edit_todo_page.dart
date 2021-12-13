@@ -1,9 +1,7 @@
 import 'package:demo_xyzies/App/Widgets/widgets_todo/todo_form_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_xyzies/App/model/todo.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:demo_xyzies/App/provider/todos.dart';
-import 'package:demo_xyzies/utils.dart';
 import 'package:provider/provider.dart';
 
 class EditTodoPage extends StatefulWidget {
@@ -29,10 +27,10 @@ class _EditTodoPageState extends State<EditTodoPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text('Edit Todo'),
+          title: const Text('Edit Todo'),
           actions: [
             IconButton(
-              icon: Icon(Icons.delete),
+              icon: const Icon(Icons.delete),
               onPressed: () {
                 final provider =
                     Provider.of<TodosProvider>(context, listen: false);

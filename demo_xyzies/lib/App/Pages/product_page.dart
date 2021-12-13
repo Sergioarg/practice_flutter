@@ -16,8 +16,8 @@ class _ProductPageState extends State<ProductPage> {
         elevation: 0,
         backgroundColor: Colors.blue,
         title: const Text('Carousel Cars',
-            style: TextStyle(color: Colors.black, fontSize: 30)),
-        centerTitle: true,
+            style: TextStyle(fontSize: 30)),
+        centerTitle: false,
       ),
       body: const SizedBox(
         width: double.infinity,

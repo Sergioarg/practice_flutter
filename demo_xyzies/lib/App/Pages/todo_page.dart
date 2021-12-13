@@ -1,7 +1,6 @@
 import 'package:demo_xyzies/App/Widgets/widgets_todo/add_todo_dialog.dart';
 import 'package:demo_xyzies/App/Widgets/widgets_todo/completed_list_todo.dart';
 import 'package:demo_xyzies/App/Widgets/widgets_todo/todo_list_widget.dart';
-// import 'package:demo_xyzies/main.dart';
 import 'package:flutter/material.dart';
 
 class TodoApp extends StatefulWidget {
@@ -14,32 +13,33 @@ class TodoApp extends StatefulWidget {
 class _TodoAppState extends State<TodoApp> {
   @override
   Widget build(BuildContext context) {
+
+    // TODO: FIX CHANGE TO PAGE COMPLETED
     final tabs = [
-      TodoListWidget(),
-      CompletedListWidget(),
+      const TodoListWidget(),
+      const CompletedListWidget(),
     ];
 
     int selectIndex = 0;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todo App'),
+        title: const Text('Todo App'),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
-        unselectedItemColor: Colors.red.withOpacity(0.7),
+        unselectedItemColor: Colors.black.withOpacity(0.7),
         selectedItemColor: Colors.black,
         currentIndex: selectIndex,
         onTap: (index) => setState(() {
           selectIndex = index;
         }),
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: 'Todos'),
           BottomNavigationBarItem(icon: Icon(Icons.done), label: 'Completed'),
         ],
       ),
       body: tabs[selectIndex],
-
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -47,10 +47,10 @@ class _TodoAppState extends State<TodoApp> {
         backgroundColor: Colors.black,
         onPressed: () => showDialog(
           context: context,
-          builder: (context) => AddTodoDialogWidget(),
+          builder: (context) => const AddTodoDialogWidget(),
           barrierDismissible: true,
         ),
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
     );

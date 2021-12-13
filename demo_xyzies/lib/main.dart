@@ -1,6 +1,4 @@
 import 'package:demo_xyzies/App/Pages/app_page.dart';
-import 'package:demo_xyzies/App/Pages/home_page.dart';
-import 'package:demo_xyzies/App/Pages/todo_page.dart';
 import 'package:demo_xyzies/App/provider/todos.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.blue,
           scaffoldBackgroundColor: Colors.white,
         ),
-        home: MyAppPage(),
+        home: const MyAppPage(),
       ),
     );
 }

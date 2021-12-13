@@ -47,7 +47,7 @@ class TodoWidget extends StatelessWidget {
   Widget buildTodo(BuildContext context) => GestureDetector(
         onTap: () => editTodo(context, todo), // this is to make click directly
         child: Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Row(
             children: [
               Checkbox(
@@ -78,10 +78,10 @@ class TodoWidget extends StatelessWidget {
                     ),
                     if (todo.description.isNotEmpty)
                       Container(
-                        margin: EdgeInsets.only(top: 4),
+                        margin: const EdgeInsets.only(top: 4),
                         child: Text(
                           todo.description,
-                          style: TextStyle(fontSize: 20, height: 1.5),
+                          style: const TextStyle(fontSize: 20, height: 1.5),
                         ),
                       ),
                   ],
@@ -106,7 +106,7 @@ class TodoWidget extends StatelessWidget {
         ),
       );
 
-  // TODO: AGREGAR NUEVA PAGINA
+  // TODO: Add new page
   // void completeTodo(BuildContext context, Todo tod) => Navigator.of(context).push(
   //   MaterialPageRoute(
   //         builder: (context) => CompleteTodoPage(todo: todo),
