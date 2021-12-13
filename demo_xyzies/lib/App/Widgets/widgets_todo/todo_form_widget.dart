@@ -49,7 +49,7 @@ class TodoFormWidget extends StatelessWidget {
 
 
   Widget buildDescription() => TextFormField(
-    maxLines: 2,
+    maxLines: 3,
     initialValue: description,
     onChanged: onChangedDescription,
     decoration: InputDecoration(

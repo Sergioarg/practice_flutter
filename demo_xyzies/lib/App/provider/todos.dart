@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:demo_xyzies/App/model/todo.dart';
 
 class TodosProvider extends ChangeNotifier {
+  // _todo <- privated
+
   List<Todo> _todos = [
     Todo(
       createdTime: DateTime.now(),
-      title: 'Buy Food 😋',
+      title: 'Buy Food',
       description: '''- Eggs
-- Milk
-- Bread
 - Water''',
     ),
     Todo(
@@ -24,9 +24,9 @@ class TodosProvider extends ChangeNotifier {
     ),
     Todo(
       createdTime: DateTime.now(),
-      title: 'Plan Jacobs birthday party 🎉🥳',
+      title: 'Make Demo',
     ),
   ];
-
+  // make todo pubic
   List<Todo> get todos => _todos.where((todo) => todo.isDone == false).toList();
 }
