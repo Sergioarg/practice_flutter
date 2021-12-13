@@ -29,4 +29,11 @@ class TodosProvider extends ChangeNotifier {
   ];
   // make todo pubic
   List<Todo> get todos => _todos.where((todo) => todo.isDone == false).toList();
+
+  // metodos para el crud de los todos
+
+  void addTodo(Todo todo) {
+    _todos.add(todo);
+    notifyListeners();
+  }
 }

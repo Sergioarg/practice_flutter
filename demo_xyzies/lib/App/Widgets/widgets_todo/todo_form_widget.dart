@@ -36,7 +36,7 @@ class TodoFormWidget extends StatelessWidget {
         onChanged: onChangedTitle,
         validator: (title) {
           // TODO: FIX THIS VALIDATION
-          if (title == null) {
+          if (title!.isEmpty) {
             return 'The title cannot be empty';
           }
           return null;
