@@ -88,7 +88,7 @@ Widget buildContent() => Container(
                     )),
                 SizedBox(height: 20),
                 Text(
-                    'Hello my name is sergio ramos and this is a demo project to present as a technical proof for XYZies.',
+                    'Hello my name is Sergio Ramos and this is a demo project to present as a technical demo for XYZies.',
                     style:
                         TextStyle(fontSize: 15, fontWeight: FontWeight.normal)),
               ],
