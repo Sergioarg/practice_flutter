@@ -42,7 +42,6 @@ Widget buildProfileImage() => CircleAvatar(
 
 // buildSocialIcon - build the incons of the user
 Widget buildSocialIcon(IconData icon) => CircleAvatar(
-      // TODO: add href to icons
       radius: 25,
       child: Material(
           shape: const CircleBorder(),
