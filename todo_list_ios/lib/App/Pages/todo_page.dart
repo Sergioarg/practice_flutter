@@ -43,7 +43,7 @@ class _TodoAppState extends State<TodoApp> {
       body: tabs[selectedIndex],
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(100),
         ),
         backgroundColor: Colors.black,
         onPressed: () => showDialog(
