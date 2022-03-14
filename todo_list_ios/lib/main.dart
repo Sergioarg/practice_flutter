@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       create: (context) => TodosProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Demo XYZies',
+        title: 'Todo List IOs',
         theme: ThemeData(
           primaryColor: Colors.blue,
           scaffoldBackgroundColor: Colors.white,

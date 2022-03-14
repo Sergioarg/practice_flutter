@@ -1,7 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:demo_xyzies/App/Pages/product_page.dart';
 import 'package:demo_xyzies/App/Pages/todo_page.dart';
-import 'package:demo_xyzies/App/Pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class MyAppPage extends StatefulWidget {
@@ -17,14 +15,10 @@ class _MyAppPageState extends State<MyAppPage> {
 
   final pages = const [
     TodoApp(),
-    ProductPage(),
-    ProfilePage(),
   ];
 
   final items = const <Widget>[
     Icon(Icons.checklist_rtl_outlined, size: 30),
-    Icon(Icons.directions_car_filled, size: 30),
-    Icon(Icons.person, size: 30),
   ];
 
   @override
